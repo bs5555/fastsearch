@@ -1,0 +1,24 @@
+/*general clearings and body style begin*/
+body,div,dl,dd,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td {margin:0;padding:0;}
+table {border-collapse:collapse;border-spacing:0;}
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style: none;}
+ol, ul, li {font-family: inherit;font-size: 100%;font-weight: inherit;font-style: inherit;vertical-align: baseline;white-space: normal;text-align: left;margin: 0;padding: 0;border: 0;outline: 0;background: transparent;}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight: normal;}
+q:before,q:after{content:'';}
+div.clear{clear:both;}
+.left {float:left;}
+.right {float:right;}
+.hidden {display:none;}
+body {font-family: Arial, Verdana, Helvetica, sans-serif;color: #000000;background:#ffffff;}
+body a:link    {color:#336699;}
+body a:visited {color:#003366;}
+body a:hover   {color:#ff3333;}
+body a:active  {outline: none;}
+/*general clearings and body style end*/
+
+div.frame {margin:20px; padding:20px; border:4px solid #eeeeee; font-size:0.8em;}
+div.itemholder {}
+div.item {color:#333333; background:#eeeeee; padding:2px; margin:2px; float:left;}

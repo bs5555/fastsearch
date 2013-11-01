@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-2">
+	<title>project_localsearch</title>
+	<style type="text/css" media="screen">@import url(res/g.css);</style>
+	<style type="text/css" media="screen"></style>
+	<script src="res/jquery.js"></script>
+	<script>
+
+(function(jQuery){
+	jQuery.fn.extend({
+		localsearch: function(txt,selector) {
+			return this.each( function() {
+	      var l = $(this);
+        msearch(l,txt,selector);
+        var minput = $('<input class="'+selector+'_search" value="'+txt+'">');
+        l.before(minput);
+        minput.bind('keyup',function(){
+        	msearch(l,$(this).val(),selector);
+        	});
+	  	});
+    }
+ });
+
+ function msearch(me,txt,selector)
+ {
+  me.children('.'+selector).each(function(i,item){
+  	$(item).removeClass('hidden');
+    if($(item).html().indexOf(txt) < 0)
+    {
+       $(item).addClass('hidden');
+    };
+  });
+ }
+})(jQuery);
+
+jQuery(document).ready(
+function()
+{
+	$('.itemholder').localsearch('A','item');
+});
+
+  </script>
+</head>
+<body>
+
+<div class="frame">
+<div class="itemholder">
+<div class="item">Aamon or Amon (Christian demonology)</div>
+<div class="item">Abaddon/Apollyon (Christian demonology)</div>
+<div class="item">Abalam (Christian demonology)</div>
+<div class="item">Abezethibou (Testament of Solomon)</div>
+<div class="item">Abraxas (Gnosticism)</div>
+<div class="item">Abyzou (Jewish mythology)</div>
+<div class="item">Adramelech (Assyrian mythology, Christian demonology)</div>
+<div class="item">Aeshma (Zoroastrianism)</div>
+<div class="item">Agaliarept (Jewish mythology)</div>
+<div class="item">Agrat Bat Mahlat (Jewish demonology)</div>
+<div class="item">Agares (Christian demonology)</div>
+<div class="item">Agiel (Jewish mythology)</div>
+<div class="item">Ahriman/Angra Mainyu (Zoroastrianism)</div>
+<div class="item">Aim/Haborym (Christian demonology)</div>
+<div class="item">Aka Manah/Akem Manah/Akoman/Akvan (Zoroastrianism)</div>
+<div class="item">Ala (Slavic mythology)</div>
+<div class="item">Alal (Chaldean mythology)</div>
+<div class="item">Alastor (Christian demonology)</div>
+<div class="item">Alloces/Allocer (Christian demonology)</div>
+<div class="item">Allu (Akkadian mythology)</div>
+<div class="item">Amaymon (Christian demonology)</div>
+<div class="item">Amdusias (Christian demonology)</div>
+<div class="item">Ammut (Egyptian mythology)</div>
+<div class="item">Amon (Christian demonology)</div>
+<div class="item">Amy (Christian demonology)</div>
+<div class="item">Anamalech (Assyrian mythology)</div>
+<div class="item">Andhaka (Hindu mythology)</div>
+<div class="item">Andras (Christian demonology)</div>
+<div class="item">Andrealphus (Christian demonology)</div>
+<div class="item">Andromalius (Christian demonology)</div>
+<div class="item">Antichrist (Christian demonology)</div>
+<div class="item">Anzu (Sumerian mythology)</div>
+<div class="item">Apep (a.k.a. Apophis) (Egyptian mythology)</div>
+<div class="item">Armaros (Jewish demonology)</div>
+<div class="item">Archon (Gnosticism)</div>
+<div class="item">Asag (Sumerian demonology)</div>
+<div class="item">Asakku (Babylonian mythology)</div>
+<div class="item">Asb'el (Jewish mythology)</div>
+<div class="item">Asmodai/Asmodeus (Jewish folklore and Christian mythology)</div>
+<div class="item">Astaroth (Christian demonology)</div>
+<div class="item">Asura (Hindu mythology)</div>
+<div class="item">Azazel / Azaz'el (Jewish demonology)</div>
+<div class="item">Azi Dahaka/Dahak (Zoroastrianism)</div>
+<div class="item">Baal/Bael (Christian demonology)</div>
+<div class="item">Balam (Christian demonology)</div>
+<div class="item">Balberith (Jewish demonology)</div>
+<div class="item">Bali Raj (Hindu mythology)</div>
+<div class="item">Banshee (Irish mythology)</div>
+<div class="item">Baphomet (Christian folklore)</div>
+<div class="item">Barbas (Christian demonology)</div>
+<div class="item">Barbatos (Christian demonology)</div>
+<div class="item">Bathin/Mathim/Bathym/Marthim (Christian demonology)</div>
+<div class="item">Beball (Christian demonology)</div>
+<div class="item">Beelzebub (Jewish demonology, Christian demonology)</div>
+<div class="item">Behemoth (Jewish demonology)</div>
+<div class="item">Belial (Jewish demonology, Christian demonology)</div>
+<div class="item">Beleth (Christian demonology)</div>
+<div class="item">Belphegor (Christian demonology)</div>
+<div class="item">Berith/Beherit (Phoenician mythology, Christian demonology)</div>
+<div class="item">Bhuta (Sanskrit)</div>
+<div class="item">Bies (Slavic mythology)</div>
+<div class="item">Bifrons (Christian demonology)</div>
+<div class="item">Boruta (Slavic mythology)</div>
+<div class="item">Botis (Christian demonology)</div>
+<div class="item">Buer (Christian demonology)</div>
+<div class="item">Bukavac (Slavic mythology)</div>
+<div class="item">Bune (Christian mythology)</div>
+<div class="item">Bushyasta (Zoroastrianism)</div>
+<div class="item">Caim/Camio (Christian demonology)</div>
+<div class="item">Carabia (Christian demonology)</div>
+<div class="item">Charun (Etruscan mythology)</div>
+<div class="item">Chemosh (Moabite mythology)</div>
+<div class="item">Choronzon (Thelema)</div>
+<div class="item">Cimejes/Kimaris/Cimeies (Christian demonology)</div>
+<div class="item">Corson (Christian demonology)</div>
+<div class="item">Crocell/Procell (Christian demonology)</div>
+<div class="item">Culsu (Etruscan mythology)</div>
+<div class="item">Daeva (Zoroastrianism demonology)</div>
+<div class="item">Dagon (Semitic mythology)</div>
+<div class="item">Dantalion (Christian demonology)</div>
+<div class="item">Danjal (Jewish mythology)</div>
+<div class="item">Dasa (Hindu mythology)</div>
+<div class="item">Davy Jones (nautical folklore)</div>
+<div class="item">Decarabia (Christian demonology)</div>
+<div class="item">Demiurge (Gnosticism)</div>
+<div class="item">Demogorgon (Christian demonology)</div>
+<div class="item">Devil (Christian demonology)</div>
+<div class="item">Div-e Sepid (Persian mythology)</div>
+<div class="item">Drekavac (Slavic mythology)</div>
+<div class="item">Dzoavits (Native American mythology)</div>
+<div class="item">Eligos (Christian demonology)</div>
+<div class="item">Eisheth (Jewish demonology)</div>
+<div class="item">Empusa (Greek mythology)</div>
+<div class="item">Euryale (Greek mythology)</div>
+<div class="item">Eurynomos (Greek mythology)</div>
+<div class="item">Eblis (Islamic demonology)</div>
+<div class="item">Familiars (Christian demonology)</div>
+<div class="item">Focalor (Christian demonology)</div>
+<div class="item">Foras/Forcas/Forras/ (Christian demonology)</div>
+<div class="item">Forneus (Christian demonology)</div>
+<div class="item">Furcas/Forcas (Christian demonology)</div>
+<div class="item">Furfur (Christian demonology)</div>
+<div class="item">Gaap (Christian demonology)</div>
+<div class="item">Gader'el (Jewish demonology)</div>
+<div class="item">Gaki (Japanese mythology)</div>
+<div class="item">Gamigin (Christian demonology)</div>
+<div class="item">Gello (Greek mythology, Christian mythology)</div>
+<div class="item">Glasya-Labolas/Caacrinolaas/Caassimolar/Classyalabolas/Glassia-labolis (Christian demonology)</div>
+<div class="item">Gorgon (Greek mythology)</div>
+<div class="item">Gremory/Gomory (Christian demonology)</div>
+<div class="item">Grigori (Jewish demonology)</div>
+<div class="item">Gualichu (Mapuche mythology)</div>
+<div class="item">Guayota (Guanche mythology)</div>
+<div class="item">Gusion/Gusoin/Gusoyn (Christian demonology)</div>
+<div class="item">Haagenti (Christian demonology)</div>
+<div class="item">Halphas/Malthus (Christian demonology)</div>
+<div class="item">Harpy (Greek mythology)</div>
+<div class="item">Haures/Flauros/Flavros/Hauras/Havres (Christian demonology)</div>
+<div class="item">Humbaba (Sumerian mythology, Akkadian mythology)</div>
+<div class="item">Ifrit (Islamic mythology)</div>
+<div class="item">Imp (Christian demonology, Germanic folklore)</div>
+<div class="item">Incubus (Christian demonology, Chaldean mythology, Jewish folklore)</div>
+<div class="item">Ipos/Ipes (Christian demonology)</div>
+<div class="item">Iblis (Islamic demonology)(Satan)</div>
+<div class="item">Jinn (Islamic demonology)</div>
+<div class="item">Jikininki (Japanese mythology)</div>
+<div class="item">Kabandha/Kabhanda (Hinduism)</div>
+<div class="item">Kasadya (Jewish demonology)</div>
+<div class="item">Kokb'ael (Jewish demonology)</div>
+<div class="item">Kali (Hindu mythology)</div>
+<div class="item">Kroni (Ayyavazhi demonology)</div>
+<div class="item">Labal (Christian demonology)</div>
+<div class="item">Labasu (Babylonian mythology)</div>
+<div class="item">Lady Midday (Slavic mythology)</div>
+<div class="item">Lamashtu (Sumerian mythology)</div>
+<div class="item">Lamia (Bulgarian folklore, Christian demonology and Greek mythology)</div>
+<div class="item">Latiangle (Christian demonology)</div>
+<div class="item">Legion (Christian demonology)</div>
+<div class="item">Lechies (Slavic mythology)</div>
+<div class="item">Leyak (Indonesian mythology)</div>
+<div class="item">Lempo (Finnish mythology)</div>
+<div class="item">Leraje/Leraie (Christian demonology)</div>
+<div class="item">Leviathan (Jewish demonology, Christian demonology)</div>
+<div class="item">Lili/Lilin/Lilim (Jewish demonology)</div>
+<div class="item">Lilith (Sumerian mythology, Akkadian mythology, Jewish folklore)</div>
+<div class="item">Lucifer (Christian demonology)</div>
+<div class="item">Lucifuge Rofocale (Christian demonology)</div>
+<div class="item">Malphas (Christian demonology)</div>
+<div class="item">Mammon (Christian demonology)</div>
+<div class="item">Mara (Buddhist mythology)</div>
+<div class="item">Maricha(Hindu mythology)</div>
+<div class="item">Marax/Morax/Foraii (Christian demonology)</div>
+<div class="item">Marbas (Christian demonology)</div>
+<div class="item">Marchosias (Christian demonology)</div>
+<div class="item">Masih ad-Dajjal/Ad-Dajjal/Dajjal (Islamic eschatology)</div>
+<div class="item">Mastema (Jewish demonology)</div>
+<div class="item">Medusa (Greek mythology)</div>
+<div class="item">Melchiresa / Melki-resha (Jewish mythology)</div>
+<div class="item">Mephistopheles (Christian folklore, German folklore)</div>
+<div class="item">Merihem (Christian demonology)</div>
+<div class="item">Moloch (Christian demonology)</div>
+<div class="item">Murmur (Christian demonology)</div>
+<div class="item">Naamah (demon) (Jewish demonology)</div>
+<div class="item">Naberius/Cerbere (Christian demonology)</div>
+<div class="item">Naberus (Christian demonology)</div>
+<div class="item">Naphula (Christian demonology)</div>
+<div class="item">Neqa'el</div>
+<div class="item">Ninurta (Sumerian mythology, Akkadian mythology)</div>
+<div class="item">Namtar (Sumerian mythology</div>
+<div class="item">Onoskelis (Testament of Solomon)</div>
+<div class="item">Oray (Christian demonology)</div>
+<div class="item">Orcus</div>
+<div class="item">Orias (Christian demonology)</div>
+<div class="item">Oriax (Christian demonology)</div>
+<div class="item">Ornias (Testament of Solomon)</div>
+<div class="item">Orobas (Christian demonology)</div>
+<div class="item">Orobos (Christian demonology)</div>
+<div class="item">Ose (Christian demonology)</div>
+<div class="item">Paimon (Christian demonology)</div>
+<div class="item">Paimonia (Christian demonology)</div>
+<div class="item">Paymon (Christian demonology)</div>
+<div class="item">Pazuzu (Akkadian mythology, Sumerian mythology)</div>
+<div class="item">Phenex (Christian demonology)</div>
+<div class="item">Pinem'e</div>
+<div class="item">Pithius (Christian demonology)</div>
+<div class="item">Pruflas (Christian demonology)</div>
+<div class="item">Pruslas (Christian demonology)</div>
+<div class="item">Puloman (Hindu demonology)</div>
+<div class="item">Purson/Curson (Christian demonology)</div>
+<div class="item">Rahab (Jewish folklore)</div>
+<div class="item">Raim (Christian demonology)</div>
+<div class="item">Raum (Christian demonology)</div>
+<div class="item">Ronove (Christian demonology)</div>
+<div class="item">Ronwe (Christian demonology)</div>
+<div class="item">Rum'el</div>
+<div class="item">Rumyal</div>
+<div class="item">Rusalka (Slavic mythology)</div>
+<div class="item">Rakshasa (Hinduism)</div>
+<div class="item">Rangda (Hinduism)</div>
+<div class="item">Ravan (Hinduism)</div>
+<div class="item">Sabnock (Christian demonology)</div>
+<div class="item">Saleos (Christian demonology)</div>
+<div class="item">Samael (Jewish demonology)</div>
+<div class="item">Satan (Jewish demonology, Christian demonology, Islamic demonology)</div>
+<div class="item">Scox (Christian demonology)</div>
+<div class="item">Seir (Christian demonology)</div>
+<div class="item">Semyaz (Jewish demonology)</div>
+<div class="item">Serguthy (Haitian demonology)</div>
+<div class="item">Shax/Chax (Christian demonology)</div>
+<div class="item">Shedim (Jewish folklore)</div>
+<div class="item">Sidragasum (Christian demonology)</div>
+<div class="item">Sitri (Christian demonology)</div>
+<div class="item">Sthenno (Greek mythology)</div>
+<div class="item">Stolas (Christian demonology)</div>
+<div class="item">Succubus (Sumerian mythology, Akkadian mythology, Jewish folklore, Christian demonology)</div>
+<div class="item">Surgat (Christian demonology)</div>
+<div class="item">Tannin (Jewish demonology)</div>
+<div class="item">Ukobach (Christian demonology)</div>
+<div class="item">Uvall (Christian demonology)</div>
+<div class="item">Valac (Christian demonology)</div>
+<div class="item">Valefar/Malaphar/Malephar (Christian demonology)</div>
+<div class="item">Vapula (Christian demonology)</div>
+<div class="item">Vassago (Christian demonology)</div>
+<div class="item">Vepar (Christian demonology)</div>
+<div class="item">Vephar (Christian demonology)</div>
+<div class="item">Vine (Christian demonology)</div>
+<div class="item">Xaphan (Christian demonology)</div>
+<div class="item">Xezbeth (demonology)[clarification needed]</div>
+<div class="item">Yeqon</div>
+<div class="item">Yeter'el</div>
+<div class="item">Zagan (Christian demonology)</div>
+<div class="item">Zepar (Christian demonology)</div>
+<div class="item">Ziminiar (Christian demonology)</div>
+</div>
+<div class="clear"></div>
+</div>
+
+</body></div>
+</html>
